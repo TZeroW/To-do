@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <div class="container-general">
+        <header class="sidebar">
+            <nav class="sidebar-nav">
+                <ul class="nav-list">
+                    <li class="nav-item"><a href="#" class="nav-link active">
+                            <i class="bi bi-brightness-high"></i>
+                            My Day</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">
+                            <i class="bi bi-star"></i>
+                            Importante</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">
+                            <i class="bi bi-calendar-range"></i>
+                            Mis Planes</a></li>
+                </ul>
+
+                <div class="line"></div>
+
+                <h2 class="list-h2">Listas</h2>
+
+                <ul class="nav-list">
+                    <li class="nav-item"><a href="" class="nav-link-list"><i class="bi bi-cart4"></i>Compras</a></li>
+                    <li class="nav-item"><a href="" class="nav-link-list"><i class="bi bi-list-task"></i>Tareas</a></li>
+                    <li class="nav-item"><a href="" class="nav-link-list"><i class="bi bi-book"></i>Libros</a></li>
+                </ul>
+            </nav>
+            <div class="sidebar-footer">
+                <button class="botton-sidebar-add">
+                    <i class="bi bi-plus-circle-dotted"></i> Nueva Lista
+                </button>
+            </div>
+        </header>
+        <main class="main-content">
+            <section class="content-header">
+                <h1 class="content-title">Mi Día</h1>
+                <p class="content-subtitle">Miércoles, 12 de Febrero</p>
+            </section>
+
+            <section class="task-area">
+
+                <ul id="task-list" class="task-list">
+                </ul>
+                <div class="task-control">
+                    <button id="show-input-btn" class="btn-task-trigger">
+                        <i class="bi bi-plus-lg"></i>
+                        <span class="btn-text">Nueva Tarea</span>
+                    </button>
+
+                    <div id="input-container" class="task-input-card d-none">
+                        <i class="bi bi-circle task-check-icon"></i>
+                        <input type="text" id="task-name" class="task-field">
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+</body>
+
+</html>

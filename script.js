@@ -49,6 +49,10 @@ function addTask(text) {
     })
 }
 
+function mensajeDesarrollo() {
+    window.alert("Esta sección está en desarrollo.");
+}
+
 function updateDate() {
     const dateElement = document.getElementById('date-day');
     const now = new Date();

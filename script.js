@@ -26,6 +26,9 @@ function addTask(text) {
     li.innerHTML = `
     <i class="bi bi-circle task-check"></i>
     <span class="task-text">${text}</span>
+    <button class="delete-btn">
+        <i class="bi bi-trash" aria-label="Borrar tarea"></i>
+    </button>
     `;
 
     taskList.appendChild(li);
@@ -35,8 +38,39 @@ function addTask(text) {
         e.target.classList.toggle('bi-check-circle-fill');
         li.classList.toggle('completed');
     });
+
+    const deleteBtn = li.querySelector('.delete-btn');
+    deleteBtn.addEventListener('click', () => {
+        li.style.opacity = '0';
+        li.style.transform = 'translateX(20px)';
+        setTimeout(() => {
+            li.remove();
+        }, 200);
+    })
 }
 
+function updateDate() {
+    const dateElement = document.getElementById('date-day');
+    const now = new Date();
+
+    const options = {
+        weekday: 'long',
+        year: 'numeric',
+        month: 'long',
+        day: 'numeric'
+    };
+
+    let formattedDate = now.toLocaleDateString('es-ES', options);
+    formattedDate = formattedDate.charAt(0).toUpperCase() + formattedDate.slice(1);
+
+    dateElement.textContent = formattedDate;
+}
+
+updateDate();
+
+
+
+// Boton y el input pa que desaparesca y aparesca
 
 document.addEventListener('mousedown', (e) => {
     if (!inputCard.contains(e.target) && inputTask.value === "") {
